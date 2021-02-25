@@ -1,0 +1,41 @@
+{
+    "apps": [
+        {
+            "name": "Music Blobs",
+            "url": "https://musicblobs.com"
+        },
+        {
+            "name": "Video Blobs",
+            "url": "https://videoblobs.com"
+        }
+    ],
+    "chat_url": "https://app.slack.com/client/T01ABCG4NK1/C01NN74H0LW/details/",
+    "checkLinks": false,
+    "group": "ansible_roles",
+    "license": "MIT",
+    "line": "aqua",
+    "company_name": "Megabyte LLC",
+    "profile": {
+        "galaxy": "https://galaxy.ansible.com/professormanhattan",
+        "github": "https://github.com/ProfessorManhattan",
+        "linkedin": "https://www.linkedin.com/in/blzalewski",
+        "npmjs": "https://www.npmjs.com/~thisismyfirstday",
+        "pypi": "https://pypi.org/user/ProfessorManhattan",
+        "replit": "https://repl.it/@ProfessorMegaby",
+        "stackblitz": "https://stackblitz.com/@ProfessorManhattan",
+        "twitter": "PrfssrManhattan",
+        "vagrant": "https://app.vagrantup.com/ProfessorManhattan"
+    },
+    "repository": {
+        "group": {
+          "ansible_roles": "https://gitlab.com/megabyte-space/ansible-roles"
+        },
+        "playbooks": "https://gitlab.com/ProfessorManhattan/Playbooks"
+    },
+    "website": {
+        "documentation": "https://megabyte.space/docs",
+        "homepage": "https://megabyte.space",
+        "privacy_policy": "https://megabyte.space/privacy",
+        "terms": "https://megabyte.space/terms"
+    }
+}
