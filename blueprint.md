@@ -1,0 +1,10 @@
+{{ load:modules/docs/header.md }}
+{{ load:modules/docs/subheader.md }}
+{{ load:modules/docs/quick_description.md }}
+{{ template:toc }}
+{{ load:modules/docs/overview.md }}
+{{ load:modules/docs/supported_os.md }}
+{{ load:modules/docs/dependencies.md }}
+{{ load:modules/docs/example.md }}
+{{ load:modules/docs/contributing.md }}
+{{ load:modules/docs/license.md }}
