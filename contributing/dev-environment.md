@@ -17,4 +17,5 @@ With all the requirements installed, navigate to the root directory and run the 
 pip3 install -r requirements.txt
 ansible-galaxy install -r requirements.yml
 pre-commit install
+git submodule update --init --recursive
 ```
