@@ -13,9 +13,16 @@ Before contributing to this project, you will have to make sure you have the too
 
 With all the requirements installed, navigate to the root directory and run the following commands to install the Python dependencies and Ansible Galaxy dependencies:
 
-```
+```terminal
 pip3 install -r requirements.txt
 ansible-galaxy install -r requirements.yml
 pre-commit install
 git submodule update --init --recursive
+```
+
+If you are experiencing issues with the Python modules, you can make use of `venv` by running the following before running the above commands:
+
+```terminal
+python3 -m venv venv
+source venv/bin/activate
 ```

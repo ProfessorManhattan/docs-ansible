@@ -2,7 +2,7 @@
 
 You can test all of the operating systems we support by running the following command in the root of the project:
 
-```
+```shell
 molecule test
 ```
 
@@ -16,7 +16,7 @@ It is important to note that `molecule test` tests for idempotence. This means t
 
 If you would like to shell into a container for debugging, you can do that by running:
 
-```
+```shell
 molecule converge
 molecule login
 ```
@@ -35,7 +35,7 @@ Some of our roles include applications like Android Studio. You can not fully te
 
 You can specify which scenario you want to test by passing the -s flag with the name of the scenario you want to run. For instance, if you wanted to test on Ubuntu Desktop, you would run the following command:
 
-```
+```shell
 molecule test -s ubuntu-desktop
 ```
 

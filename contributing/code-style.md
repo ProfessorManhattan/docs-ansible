@@ -8,7 +8,7 @@ When there is only one parameter, then you should inline it.
 
 **BAD**
 
-```
+```yaml
 when:
   - install_minikube
 ...
@@ -19,7 +19,7 @@ when:
 
 **GOOD**
 
-```
+```yaml
 when: install_minikube
 ...
 when:
@@ -33,7 +33,7 @@ Anywhere an array/list is used, the list should be ordered alphabetically (if po
 
 **BAD**
 
-```
+```yaml
 autokey_dependencies:
   - pkg-config
   - make
@@ -42,7 +42,7 @@ autokey_dependencies:
 
 **GOOD**
 
-```
+```yaml
 autokey_dependencies:
   - git
   - make
@@ -55,7 +55,7 @@ The format in `tasks/main.yml` of each role should follow roughly the same forma
 
 **GOOD**
 
-```
+```yaml
 ---
 - name: Include variables based on the operating system
   include_vars: "{{ ansible_os_family }}.yml"
@@ -74,7 +74,7 @@ For example, say the application being installed is Android Studio. The dependen
 
 **BAD**
 
-```
+```yaml
 - name: "Ensure {{ app_name }}'s dependencies are installed"
   community.general.pacman:
     name: "{{ android_studio_deps }}"
@@ -83,7 +83,7 @@ For example, say the application being installed is Android Studio. The dependen
 
 **GOOD**
 
-```
+```yaml
 - name: "Ensure {{ app_name }}'s dependencies are installed"
   community.general.pacman:
     name: "{{ androidstudio_dependencies }}"
@@ -92,7 +92,7 @@ For example, say the application being installed is Android Studio. The dependen
 
 If there are dependencies that are specific to a certain OS, then the dependency variable should be titled `{{ role_name }}_dependencies_{{ os_family }}`. For Android Studio, a Fedora-specific dependency list should be named `androidstudio_dependencies_fedora`. In practice, this would look like:
 
-```
+```yaml
 - name: "Ensure {{ app_name }}'s dependencies are installed (Fedora)"
   dnf:
     name: "{{ androidstudio_dependencies_fedora }}"
@@ -106,7 +106,7 @@ DRY stands for "Don't Repeat Yourself." Whenever there is code that is duplicate
 
 **GOOD**
 
-```
+```yaml
 - name: Run generic Linux tasks
   include_tasks: install-Linux.yml
 ```

@@ -2,7 +2,7 @@
 
 The process of running linters is mostly automated. Molecule is configured to lint so you will see linting errors when you run `molecule test` (if your code has any). There are a few gaps that are filled in by [pre-commit](https://pre-commit.com/). If you followed the [Setting Up Development Environment](), you should have noticed that one of the lines you need to execute to set up the project is:
 
-```
+```shell
 pre-commit install
 ```
 
@@ -12,7 +12,7 @@ After installing pre-commit, your code will be automatically be sent through sev
 
 You can manually run ansible-lint by executing the following command in the project's root:
 
-```
+```shell
 pip3 install -r requirements
 ansible-lint
 ```
@@ -29,7 +29,7 @@ This error can be solved by telling Ansible what files the command creates or de
 
 Here is a quick example that will remove the error:
 
-```
+```yaml
 - name: Run command if /path/to/database does not exist (with 'args' keyword)
   command: /usr/bin/make_database.sh db_user db_name
   args:

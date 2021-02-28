@@ -10,9 +10,23 @@ All of our roles should run without error on the following operating systems:
 * Mac OS X (Latest)
 * Windows 10 (Latest)
 
+### Other Operating Systems
+
+We are considering adding support for the following operating systems. At your convienience, please also test the roles on:
+
+* **Qubes**
+* Elementary OS
+* Zorin
+* OpenSUSE
+* Manjaro
+* FreeBSD
+* Mint
+
+### Styling for Platform-Specific Roles
+
 If you have a role that only installs software made for Windows 10 then ensure that the tasks are only run when the system is a Windows system by using `when:` in the `tasks/main.yml` file. For example, the following `main.yml` does this:
 
-```
+```yaml
 # tasks/main.yml in the Visual Studio role
 ---
 - name: Include variables based on the operating system
