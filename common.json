@@ -11,7 +11,6 @@
     ],
     "chat_url": "https://app.slack.com/client/T01ABCG4NK1/C01NN74H0LW/details/",
     "checkLinks": false,
-    "group": "ansible_roles",
     "license": "MIT",
     "line": "aqua",
     "company_name": "Megabyte LLC",
@@ -28,9 +27,24 @@
     },
     "repository": {
         "group": {
-          "ansible_roles": "https://gitlab.com/megabyte-space/ansible-roles"
+          "ansible_roles": "https://gitlab.com/megabyte-space/ansible-roles",
+          "apps": "https://gitlab.com/megabyte-space/apps",
+          "ci": "https://gitlab.com/megabyte-space/ci",
+          "cloud": "https://gitlab.com/megabyte-space/cloud",
+          "common": "https://gitlab.com/megabyte-space/common",
+          "cryptocurrency": "https://gitlab.com/megabyte-space/cryptocurrency",
+          "docker_compose": "https://gitlab.com/megabyte-space/docker-compose",
+          "dockerfile": "https://gitlab.com/megabyte-space/dockerfile",
+          "documentation": "https://gitlab.com/megabyte-space/documentation",
+          "kubernetes": "https://gitlab.com/megabyte-space/kubernetes",
+          "npm": "https://gitlab.com/megabyte-space/npm",
+          "packer": "https://gitlab.com/megabyte-space/packer",
+          "python": "https://gitlab.com/megabyte-space/python",
+          "software": "https://gitlab.com/megabyte-space/software",
+          "web_components": "https://gitlab.com/megabyte-space/web-components"
         },
-        "playbooks": "https://gitlab.com/ProfessorManhattan/Playbooks"
+        "playbooks": "https://gitlab.com/ProfessorManhattan/Playbooks",
+        "wrangler": "https://gitlab.com/megabyte-space/wrangler"
     },
     "website": {
         "documentation": "https://megabyte.space/docs",
