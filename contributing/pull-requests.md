@@ -4,7 +4,7 @@ All pull requests should be associated with issues. You can find the [issues boa
 
 ### How to Commit Code
 
-Instead of using `git commit`, we prefer that you use `npm run commit`. You will understand why when you try it but basically it streamlines the commit process and helps us generate better CHANGELOGs.
+Instead of using `git commit`, we prefer that you use `npm run commit`. You will understand why when you try it but basically it streamlines the commit process and helps us generate better `CHANGELOG.md` files.
 
 ### Pre-Commit Hook
 
