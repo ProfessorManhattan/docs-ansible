@@ -68,7 +68,7 @@ The format in `tasks/main.yml` of each role should follow roughly the same forma
 
 ### Dependency Variables
 
-In most cases, a role will require that dependencies are met before installing the software the role is intended for. These dependencies are usually an array of packages that need to be installed. These dependencies should be seperated out into an array.
+In most cases, a role will require that software package dependencies are met before installing the software the role is intended for. These dependencies are usually an array of packages that need to be installed. These dependencies should be seperated out into an array.
 
 For example, say the application being installed is Android Studio. The dependency array should be assigned to a variable titled `androidstudio_dependencies` and placed in `vars/main.yml`.
 

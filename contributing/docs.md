@@ -1,5 +1,3 @@
 ## Updating Meta Files
 
-All of our Ansible roles share common files that need to be updated occasionally. You can update all the roles by running `bash update.sh` in the [main playbook's `misc/` folder]({{ repository.playbooks }}).
-
-If you want to update a single role, you can do so by running `update.sh` in the repository's root.
+All of our Ansible projects share common files that need to be updated occasionally. You can update all of these files by running `bash .update.sh` (or `npm run update`) in the root of the git repository. This process is done automatically if you initialize the project by running `npm i`.
