@@ -20,10 +20,11 @@ npm i
 
 This will install all the dependencies and automatically register a pre-commit hook. More specifically, `npm i` will:
 
-1. Install the Node.js dependencies
+1. Install the Node.js development environment dependencies
 2. Install a pre-commit hook using [husky](https://www.npmjs.com/package/husky)
-3. Install the Python 3 requirements
-4. Install the Ansible Galaxy requirements
+3. Ensure that meta files and documentation are up-to-date
+4. Install the Python 3 requirements
+5. Install the Ansible Galaxy requirements
 
 ### NPM Tasks Available
 
