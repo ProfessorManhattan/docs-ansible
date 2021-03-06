@@ -1,6 +1,6 @@
 ## Code Style
 
-We try to follow the same code style across all our Ansible repositories. If something is done one way somewhere, then it should be done the same way elsewhere. It is up to you to [browse through our roles]({{ repository.playbooks }}/-/tree/master/roles) to get a feel for how everything should be styled. You should clone [the main Playbooks repository]({{ repository.playbooks }}), initialize all the submodules, and search through the code base to see how we are *styling* different task types. Below are some examples:
+To elaborate again, we try to follow the same code style across all our Ansible repositories. If something is done one way somewhere, then it should be done the same way elsewhere. It is up to you to [browse through our roles]({{ repository.playbooks }}/-/tree/master/roles) to get a feel for how everything should be styled. You should clone [the main Playbooks repository]({{ repository.playbooks }}), initialize all the submodules either via `npm i` or `git submodule update --init --recursive`, and search through the code base to see how we are *styling* different task types. Below are some examples:
 
 ### Arrays
 
@@ -63,7 +63,7 @@ The format in `tasks/main.yml` of each role should follow roughly the same forma
 - name: Include tasks based on the operating system
   become: true
   block:
-    - include_tasks: "install-{{ ansible_os_family }}.yml"
+    - include_tasks: "install-{\ { ansible_os_family }}.yml"
 ```
 
 ### Dependency Variables

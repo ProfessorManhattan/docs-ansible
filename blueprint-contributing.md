@@ -5,6 +5,7 @@
 {{ load:.modules/docs/contributing/supported-os.md }}
 {{ load:.modules/docs/contributing/dev-environment.md }}
 {{ load:.modules/docs/contributing/pull-requests.md }}
+{{ load:.modules/docs/contributing/code-format.md }}
 {{ load:.modules/docs/contributing/code-style.md }}
 {{ load:.modules/docs/contributing/testing.md }}
 {{ load:.modules/docs/contributing/linting.md }}
