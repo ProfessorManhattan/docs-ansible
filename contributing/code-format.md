@@ -6,7 +6,7 @@ We try to structure our Ansible task and variable files similarly across all our
 * The file names and variable names are consistent across our roles
 * Contributors automatically format some parts of their code by leveraging our pre-commit hook (which is installed when you run `npm i` in the root of a project)
 
-### Example
+### Code Format Example
 
 To dive a little deeper, take the following block of code that was retrieved from `tasks/main.yml` from the Android Studio role as an example:
 

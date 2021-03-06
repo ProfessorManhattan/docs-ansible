@@ -60,7 +60,7 @@ For example, say the application being installed is Android Studio. The dependen
 ```yaml
 - name: "Ensure {{ {{ app_name }} }}'s dependencies are installed"
   community.general.pacman:
-    name: "{\ { android_studio_deps }}"
+    name: "{{ {{ android_studio_deps }} }}"
     state: present
 ```
 
@@ -76,7 +76,7 @@ For example, say the application being installed is Android Studio. The dependen
 If there are dependencies that are specific to a certain OS, then the dependency variable should be titled `{{ {{ role_name }} }}_dependencies_{{ {{ os_family }} }}`. For Android Studio, a Fedora-specific dependency list should be named `androidstudio_dependencies_fedora`. In practice, this would look like:
 
 ```yaml
-- name: "Ensure \{{ app_name }}'s dependencies are installed (Fedora)"
+- name: "Ensure {{ {{ app_name }} }}'s dependencies are installed (Fedora)"
   dnf:
     name: "{{ {{ androidstudio_dependencies_fedora }} }}"
     state: present
