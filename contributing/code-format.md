@@ -18,7 +18,7 @@ To dive a little deeper, take the following block of code that was retrieved fro
 - name: Include tasks based on the operating system
   become: true
   block:
-    - include_tasks: 'install-{{ ansible_os_family }}.yml'
+    - include_tasks: 'install-{{{{ ansible_os_family }}}}.yml'
 ```
 
 Now, if you compare the block of code above to other `tasks/main.yml` files in other roles (which you can find in our [GitLab Ansible Roles group]({{ repository.group.ansible_roles }}) or our [main playbook]({{ repository.playbooks }})), you will see that the files are either identical or nearly identical. However, some roles will exclude the first task titled "Include variables based on the operating system" when variables are not required for the role. Our goal is to be consistent but not to the point where we are degrading the functionality of our code.
