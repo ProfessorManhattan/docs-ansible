@@ -51,7 +51,7 @@ autokey_dependencies:
 
 ### Dependency Variables
 
-In most cases, a role will require that software package dependencies are met before installing the software the role is intended for. These dependencies are usually an array of packages that need to be installed. These dependencies should be seperated out into an array.
+In most cases, a role will require that software package dependencies are met before installing the software the role is intended for. These dependencies are usually an array of packages that need to be installed. These dependencies should be separated out into an array.
 
 For example, say the application being installed is Android Studio. The dependency array should be assigned to a variable titled `androidstudio_dependencies` and placed in `vars/main.yml`.
 
@@ -85,7 +85,7 @@ If there are dependencies that are specific to a certain OS, then the dependency
 
 ### DRY
 
-DRY stands for "Don't Repeat Yourself." Whenever there is code that is duplicated across multiple task files, you should seperate it into a different file and then include it:
+DRY stands for "Don't Repeat Yourself." Whenever there is code that is duplicated across multiple task files, you should separate it into a different file and then include it:
 
 **GOOD**
 

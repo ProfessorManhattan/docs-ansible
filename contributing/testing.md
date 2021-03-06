@@ -6,7 +6,7 @@ You can test all of the operating systems we support by running the following co
 molecule test
 ```
 
-The command `molecule test` will spin up VirtualBox VMs for all the OSes we support and run the role(s). *Do this before committing code.* If you are committing code for only one OS and can not create the fix/feature for the other operating systems then please [file a seperate issue]({{ repository.playbooks }}/-/issues/new) to track the unworking OSes.
+The command `molecule test` will spin up VirtualBox VMs for all the OSes we support and run the role(s). *Do this before committing code.* If you are committing code for only one OS and can not create the fix or feature for the other operating systems then please [file an issue]({{ repository.playbooks }}/-/issues/new) so someone else can pick it up.
 
 ### Idempotence
 
