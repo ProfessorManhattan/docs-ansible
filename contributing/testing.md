@@ -30,7 +30,7 @@ For more information about Ansible Molecule, check out [the docs](https://molecu
 Some of our roles include applications like Android Studio. You can not fully test Android Studio from a Docker command line. In cases like this, you should use our desktop scenarios to provision a desktop GUI-enabled VM to test things like:
 
 * Making sure the Android Studio shortcut is in the applications menu
-* Opening Android Studio to make sure it is behaiving as expected
+* Opening Android Studio to make sure it is behaving as expected
 * Seeing if there is anything we can automate (e.g. if there is a "Terms of Usage" you have to click OK at then we should automate that process if possible)
 
 You can specify which scenario you want to test by passing the `-s` flag with the name of the scenario you want to run. For instance, if you wanted to test on Ubuntu Desktop, you would run the following command:

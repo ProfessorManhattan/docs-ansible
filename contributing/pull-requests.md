@@ -8,4 +8,4 @@ Instead of using `git commit`, we prefer that you use `npm run commit`. You will
 
 ### Pre-Commit Hook
 
-Even if you decide not to use `npm run commit`, you will see that `git commit` behaives differently since the pre-commit hook is installed when you run `npm i`. This pre-commit hook is there to test your code before committing. If you need to bypass the pre-commit hook, then you will have to add the `--no-verify` tag at the end of your `git commit` command (e.g. `git commit -m "Commit" --no-verify`).
+Even if you decide not to use `npm run commit`, you will see that `git commit` behaves differently since the pre-commit hook is installed when you run `npm i`. This pre-commit hook is there to test your code before committing. If you need to bypass the pre-commit hook, then you will have to add the `--no-verify` tag at the end of your `git commit` command (e.g. `git commit -m "Commit" --no-verify`).
