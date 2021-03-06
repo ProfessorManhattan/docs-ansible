@@ -49,23 +49,6 @@ autokey_dependencies:
   - pkg-config
 ```
 
-### main.yml
-
-The format in `tasks/main.yml` of each role should follow roughly the same format:
-
-**GOOD**
-
-```yaml
----
-- name: Include variables based on the operating system
-  include_vars: "{{ ansible_os_family }}.yml"
-
-- name: Include tasks based on the operating system
-  become: true
-  block:
-    - include_tasks: "install-{\ { ansible_os_family }}.yml"
-```
-
 ### Dependency Variables
 
 In most cases, a role will require that software package dependencies are met before installing the software the role is intended for. These dependencies are usually an array of packages that need to be installed. These dependencies should be seperated out into an array.
@@ -77,7 +60,7 @@ For example, say the application being installed is Android Studio. The dependen
 ```yaml
 - name: "Ensure {{ app_name }}'s dependencies are installed"
   community.general.pacman:
-    name: "{{ android_studio_deps }}"
+    name: "{\ { android_studio_deps }}"
     state: present
 ```
 
