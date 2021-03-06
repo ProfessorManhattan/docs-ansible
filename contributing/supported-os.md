@@ -27,7 +27,6 @@ Although we do not have a timeline set up, we are considering adding support for
 If you have a role that only installs software made for Windows 10 then ensure that the tasks are only run when the system is a Windows system by using `when:` in the `tasks/main.yml` file. Take the following `main.yml` as an example:
 
 ```yaml
-# tasks/main.yml in the Visual Studio role
 ---
 - name: Include variables based on the operating system
   include_vars: "{{ ansible_os_family }}.yml"
