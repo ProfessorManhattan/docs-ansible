@@ -104,7 +104,7 @@ The block of code above will generate markdown that would look similar to this:
 
 ### TODO Comments
 
-TODO comments are similar to action comments in the sense that through automation similar comments will be grouped together. Take the following as an example:
+TODO comments are similar to action comments in the sense that through automation similar comments will be grouped together. You should use them anytime you find a bug, think of an improvement, spot something that needs testing, or realize there is a desirable feature missing. Take the following as an example:
 
 #### Example TODO Comment Implementation
 
