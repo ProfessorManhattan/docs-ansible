@@ -1,3 +1,3 @@
-<p align="center" style="text-align:center;">
+<p>
   <b>{{ role_description }}</b></br>
 </p>
