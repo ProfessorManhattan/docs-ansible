@@ -1,8 +1,9 @@
 ## Dependencies
 
-Most of our roles rely on [Ansible Galaxy](https://galaxy.ansible.com/) collections. Some of our projects are also dependent on other roles and collections that are published on Ansible Galaxy. Before you run this role, you will need to install the collection and role dependencies by running:
+Most of our roles rely on [Ansible Galaxy](https://galaxy.ansible.com/) collections. Some of our projects are also dependent on other roles and collections that are published on Ansible Galaxy. Before you run this role, you will need to install the collection and role dependencies (as well as the Python requirements) by running:
 
 ```
+pip3 install -r requirements.txt
 ansible-galaxy install -r requirements.yml
 ```
 

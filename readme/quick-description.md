@@ -1,3 +1,1 @@
-<p>
-  <b>{{ role_description }}</b></br>
-</p>
+> </br>**{{ role_description }}**</br></br>

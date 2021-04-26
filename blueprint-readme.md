@@ -6,5 +6,5 @@
 {{ load:.modules/docs/readme/supported-os.md }}
 {{ load:.modules/docs/readme/dependencies.md }}
 {{ load:.modules/docs/readme/example.md }}
-{{ load:.modules/docs/readme/contributing-details.md }}
+{{ load:.modules/docs/readme/contributing.md }}
 {{ load:.modules/docs/readme/license.md }}
