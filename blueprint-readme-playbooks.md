@@ -4,6 +4,7 @@
 {{ template:toc }}
 {{ load:.modules/docs/readme-playbooks/introduction.md }}
 {{ load:.modules/docs/readme-playbooks/quick-start.md }}
+{{ load:.modules/docs/readme/supported-os.md }}
 {{ load:.modules/docs/readme-playbooks/dependencies.md }}
 {{ load:.modules/docs/readme-playbooks/roles.md }}
 {{ load:.modules/docs/readme-playbooks/philosophy.md }}
