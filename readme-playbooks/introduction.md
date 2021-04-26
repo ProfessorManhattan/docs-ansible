@@ -1,3 +1,5 @@
+## Introduction
+
 This repository is home a collection of Ansible playbooks meant to provision computers and networks with the "best of GitHub". Using Ansible, you can provision your whole network relatively fast in the event of a disaster. This project is also intended to increase the security of your network by allowing you to frequently wipe, reinstall, and re-provision your network, bringing it back to its original state. This is done by backing up only what needs to be backed up (like database files and Docker volumes) to encrypted S3 buckets or git repositories. Each piece of software is included as an Ansible role. Sometimes there are multiple tools that exist that perform the same task. In these cases, extensive research is done to ensure that only the best, most-popular software makes it into our role collection.
 
 This Ansible playbook is:
