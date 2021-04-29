@@ -22,4 +22,13 @@
   <a href="https://twitter.com/{{ profile.twitter }}" target="_blank">
     <img alt="Twitter: {{ profile.twitter }}" src="https://img.shields.io/twitter/follow/{{ profile.twitter }}.svg?style=social" />
   </a>
+  <a href="">
+    <img alt="macOS build status" src="https://img.shields.io/github/checks-status/MegabyteLabs/{{ github_link }}/master?color=cyan&label=macOS%20Build%20Status&logo=apple&style=for-the-badge">
+  </a>
+  <a href="">
+    <img alt="Windows 10 build status" src="https://img.shields.io/github/checks-status/MegabyteLabs/{{ github_link }}/master?color=cyan&label=Windows%20Build%20Status&logo=windows&style=for-the-badge">
+  </a>
+  <a href="">
+    <img alt="Linux build status" src="https://img.shields.io/github/checks-status/MegabyteLabs/{{ github_link }}/master?color=cyan&label=Windows%20Build%20Status&logo=windows&style=for-the-badge">
+  </a>
 </p>
