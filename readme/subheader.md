@@ -1,4 +1,4 @@
-<h4>
+<h4 align="center">
   <a href="{{ website.homepage }}" title="Megabyte Labs homepage" target="_blank">
     <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/home-solid.svg" />
   </a>
@@ -21,7 +21,7 @@
     <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/gitlab-solid.svg" />
   </a>
 </h4>
-<p>
+<p align="center">
   <a href="{{ profile.galaxy }}/{{ role_name }}" target="_blank">
     <img alt="Ansible Galaxy role: professormanhattan.{{ role_name }}" src="https://img.shields.io/ansible/role/53381?logo=ansible&style={{ badge_style }}" />
   </a>
