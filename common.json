@@ -9,6 +9,7 @@
             "url": "https://videoblobs.com"
         }
     ],
+    "badge_style": "flat",
     "chat_url": "https://app.slack.com/client/T01ABCG4NK1/C01NN74H0LW/details/",
     "checkLinks": false,
     "contact_email": "help@megabyte.space",
@@ -18,9 +19,11 @@
     "company_name": "Megabyte LLC",
     "profile": {
         "galaxy": "https://galaxy.ansible.com/professormanhattan",
-        "github": "https://github.com/ProfessorManhattan",
+        "github": "https://github.com/MegabyteLabs",
         "linkedin": "https://www.linkedin.com/in/blzalewski",
         "npmjs": "https://www.npmjs.com/~thisismyfirstday",
+        "opencollective": "https://opencollective.com/megabytelabs",
+        "patreon": "https://www.patreon.com/ProfessorManhattan",
         "pypi": "https://pypi.org/user/ProfessorManhattan",
         "replit": "https://repl.it/@ProfessorMegaby",
         "stackblitz": "https://stackblitz.com/@ProfessorManhattan",
