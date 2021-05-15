@@ -3,7 +3,7 @@
     <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/home-solid.svg" />
   </a>
   <a href="{{ profile.galaxy }}/{{ role_name }}" title="{{ role_pretty_name }} role on Ansible Galaxy">
-    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/ansible-galaxy.png" />
+    <img height="50" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/ansible-galaxy.png" />
   </a>
   <a href="{{ repository.group.ansible_roles }}/{{ role_name }}/-/blob/master/CONTRIBUTING.md" title="Learn about contributing">
     <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/contributing-solid.svg" />
