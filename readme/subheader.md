@@ -1,24 +1,24 @@
 <h4>
   <a href="{{ website.homepage }}" title="Megabyte Labs homepage" target="_blank">
-    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/home.svg" />
+    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/home-solid.svg" />
   </a>
   <a href="{{ profile.galaxy }}/{{ role_name }}" title="{{ role_pretty_name }} role on Ansible Galaxy">
-    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/galaxy.svg" />
+    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/ansible-galaxy.png" />
   </a>
   <a href="{{ repository.group.ansible_roles }}/{{ role_name }}/-/blob/master/CONTRIBUTING.md" title="Learn about contributing">
-    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/contributing.svg" />
+    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/contributing-solid.svg" />
   </a>
   <a href="{{ profile.patreon }}" title="Support us on Patreon" target="_blank">
-    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/support.svg" />
+    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/support-solid.svg" />
   </a>
   <a href="{{ chat_url }}" title="Slack chat room" target="_blank">
-    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/chat.svg" />
+    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/chat-solid.svg" />
   </a>
   <a href="{{ profile.github }}/ansible-{{ role_name }}" title="GitHub mirror" target="_blank">
-    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/github.svg" />
+    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/github-solid.svg" />
   </a>
   <a href="{{ repository.group.ansible_roles }}/{{ role_name }}" title="GitLab repository" target="_blank">
-    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/gitlab.svg" />
+    <img src="https://gitlab.com/megabyte-labs/assets/-/raw/master/svg/gitlab-solid.svg" />
   </a>
 </h4>
 <p>
