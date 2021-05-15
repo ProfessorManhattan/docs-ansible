@@ -29,10 +29,10 @@
     <img alt="Version: {{ version }}" src="https://img.shields.io/badge/version-{{ version }}-blue.svg?cacheSeconds=2592000" />
   </a>
   <a href="{{ profile.github }}/ansible-{{ role_name }}/actions/Windows.yml" target="_blank">
-    <img alt="Windows 10 build status" src="https://img.shields.io/github/workflow/status/MegabyteLabs/ansible-{{ role_name }}/Windows/master?color=cyan&label=Windows%20build&logo=windows&style={{ badge_style }}">
+    <img alt="Windows 10 build status" src="https://img.shields.io/github/workflow/status/megabyte-labs/ansible-{{ role_name }}/Windows/master?color=cyan&label=Windows%20build&logo=windows&style={{ badge_style }}">
   </a>
   <a href="{{ profile.github }}/ansible-{{ role_name }}/actions/macOS.yml" target="_blank">
-    <img alt="macOS build status" src="https://img.shields.io/github/workflow/status/MegabyteLabs/ansible-{{ role_name }}/macOS/master?label=macOS%20build&logo=apple&style={{ badge_style }}">
+    <img alt="macOS build status" src="https://img.shields.io/github/workflow/status/megabyte-labs/ansible-{{ role_name }}/macOS/master?label=macOS%20build&logo=apple&style={{ badge_style }}">
   </a>
   <a href="{{ repository.group.ansible_roles }}/{{ role_name }}/commits/master" target="_blank">
     <img alt="Linux build status" src="{{ repository.group.ansible_roles }}/{{ role_name }}/badges/master/pipeline.svg">
@@ -52,7 +52,7 @@
   </a>
   </a>
   <a href="{{ profile.github }}/{{ role_name }}" target="_blank">
-    <img alt="GitHub: MegabyteLabs" src="https://img.shields.io/github/followers/MegabyteLabs?style=social" target="_blank" />
+    <img alt="GitHub: Megabyte Labs" src="https://img.shields.io/github/followers/megabyte-labs?style=social" target="_blank" />
   </a>
   <a href="https://twitter.com/{{ profile.twitter }}" target="_blank">
     <img alt="Twitter: {{ profile.twitter }}" src="https://img.shields.io/twitter/url/https/twitter.com/{{ profile.twitter }}.svg?style=social&label=Follow%20%40{{ profile.twitter }}" />
