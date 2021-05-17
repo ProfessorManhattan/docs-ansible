@@ -3,8 +3,13 @@
 {{ load:.modules/docs/readme/quick-description.md }}
 {{ template:toc }}
 {{ load:.modules/docs/readme/overview.md }}
+{{ load:ansible_actions.md }}
+{{ load:.modules/docs/readme/variables.md }}
+{{ load:ansible_variables.md }}
 {{ load:.modules/docs/readme/supported-os.md }}
 {{ load:.modules/docs/readme/dependencies.md }}
 {{ load:.modules/docs/readme/example.md }}
+{{ load:ansible_tags.md }}
 {{ load:.modules/docs/readme/contributing.md }}
+{{ load:ansible_todo.md }}
 {{ load:.modules/docs/readme/license.md }}
