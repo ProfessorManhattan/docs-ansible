@@ -50,7 +50,7 @@
     <a href="{{ repository.gitlab_ansible_roles_group }}/{{ role_name }}/-/raw/master/LICENSE" target="_blank">
       <img alt="License: {{ license }}" src="https://img.shields.io/badge/License-{{ license }}-yellow.svg?style={{ badge_style }}" />
     </a>
-    <a href="{{ profile.opencollective }}" target="_blank">
+    <a href="{{ profile.opencollective }}" title="Support us on Open Collective" target="_blank">
       <img alt="Open Collective sponsors" src="https://img.shields.io/opencollective/sponsors/megabytelabs?logo=opencollective&style={{ badge_style }}" />
     </a>
     <a href="{{ profile.github }}" target="_blank">
