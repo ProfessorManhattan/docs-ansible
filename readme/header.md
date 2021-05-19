@@ -1,7 +1,7 @@
 <div align="center">
   <center>
     <a href="{{ repository.group.ansible_roles }}/{{ role_name }}">
-      <img alt="{{ role_pretty_name }} logo" src="{{ repository.group.ansible_roles }}/{{ role_name }}/-/raw/master/logo.png" />
+      <img width="140" height="140" alt="{{ role_pretty_name }} logo" src="{{ repository.group.ansible_roles }}/{{ role_name }}/-/raw/master/logo.png" />
     </a>
   </center>
 </div>
