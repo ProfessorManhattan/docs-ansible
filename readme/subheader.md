@@ -24,7 +24,7 @@
   </h4>
   <p align="center">
     <a href="{{ profile.galaxy }}/{{ role_name }}" target="_blank">
-      <img alt="Ansible Galaxy role: professormanhattan.{{ role_name }}" src="https://img.shields.io/ansible/role/53381?logo=ansible&style={{ badge_style }}" />
+      <img alt="Ansible Galaxy role: professormanhattan.{{ role_name }}" src="https://img.shields.io/ansible/role/{{ ansible_galaxy_project_id }}?logo=ansible&style={{ badge_style }}" />
     </a>
     <a href="{{ repository.group.ansible_roles }}/{{ role_name }}" target="_blank">
       <img alt="Version: {{ pkg.version }}" src="https://img.shields.io/badge/version-{{ pkg.version }}-blue.svg?cacheSeconds=2592000" />
