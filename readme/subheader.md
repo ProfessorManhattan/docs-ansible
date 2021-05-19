@@ -51,7 +51,10 @@
       <img alt="License: {{ license }}" src="https://img.shields.io/badge/License-{{ license }}-yellow.svg?style={{ badge_style }}" />
     </a>
     <a href="{{ profile.opencollective }}" title="Support us on Open Collective" target="_blank">
-      <img alt="Open Collective sponsors" src="https://img.shields.io/opencollective/sponsors/megabytelabs?logo=opencollective&style={{ badge_style }}" />
+      <img alt="Open Collective sponsors" src="https://img.shields.io/opencollective/sponsors/megabytelabs?label=Open%20Collective%20sponsors&logo=opencollective&style={{ badge_style }}" />
+    </a>
+    <a href="{{ profile.github }}" title="Support us on GitHub" target="_blank">
+      <img alt="GitHub sponsors" src="https://img.shields.io/github/sponsors/ProfessorManhattan?label=GitHub%20sponsors&logo=github&style={{ badge_style }}" />
     </a>
     <a href="{{ profile.github }}" target="_blank">
       <img alt="GitHub: Megabyte Labs" src="https://img.shields.io/github/followers/megabyte-labs?style=social" target="_blank" />
