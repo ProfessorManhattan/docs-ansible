@@ -8,5 +8,6 @@
 {{ load:.modules/docs/contributing/code-format.md }}
 {{ load:.modules/docs/contributing/code-style.md }}
 {{ load:.modules/docs/contributing/commenting.md }}
+{{ load:.modules/docs/contributing/docs.md }}
 {{ load:.modules/docs/contributing/testing.md }}
 {{ load:.modules/docs/contributing/linting.md }}
