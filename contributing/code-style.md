@@ -1,6 +1,6 @@
 ## Code Style
 
-To elaborate again, we try to follow the same code style across all our Ansible repositories. If something is done one way somewhere, then it should be done the same way elsewhere. It is up to you to [browse through our roles]({{ repository.playbooks }}/-/tree/master/roles) to get a feel for how everything should be styled. You should clone [the main Playbooks repository]({{ repository.playbooks }}), initialize all the submodules either via `npm i` or `git submodule update --init --recursive`, and search through the code base to see how we are *styling* different task types. Below are some examples:
+To elaborate again, we try to follow the same code style across all our Ansible repositories. If something is done one way somewhere, then it should be done the same way elsewhere. It is up to you to [browse through our roles]({{ repository.playbooks }}/-/tree/master/roles) to get a feel for how everything should be styled. You should clone [the main Playbooks repository]({{ repository.playbooks }}), initialize all the submodules either via `npm i` or `git submodule update --init --recursive`, and search through the code base to see how we are _styling_ different task types. Below are some examples:
 
 ### Arrays
 
@@ -11,7 +11,7 @@ When there is only one parameter, then you should inline it.
 ```yaml
 when:
   - install_minikube
-...
+---
 when:
   - install_minikube
   - install_hyperv_plugin
@@ -21,7 +21,7 @@ when:
 
 ```yaml
 when: install_minikube
-...
+---
 when:
   - install_minikube
   - install_hyperv_plugin
@@ -93,4 +93,3 @@ DRY stands for "Don't Repeat Yourself." Whenever there is code that is duplicate
 - name: Run generic Linux tasks
   include_tasks: install-Linux.yml
 ```
-

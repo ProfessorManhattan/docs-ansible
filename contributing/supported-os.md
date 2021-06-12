@@ -2,25 +2,25 @@
 
 All of our roles should run without error on the following operating systems:
 
-* Archlinux (Latest)
-* CentOS 7 and 8
-* Debian 9 and 10
-* Fedora (Latest)
-* Ubuntu (16.04, 18.04, 20.04, and Latest)
-* Mac OS X (Latest)
-* Windows 10 (Latest)
+- Archlinux (Latest)
+- CentOS 7 and 8
+- Debian 9 and 10
+- Fedora (Latest)
+- Ubuntu (16.04, 18.04, 20.04, and Latest)
+- Mac OS X (Latest)
+- Windows 10 (Latest)
 
 ### Other Operating Systems
 
 Although we do not have a timeline set up, we are considering adding support for the following operating systems:
 
-* **Qubes**
-* Elementary OS
-* Zorin
-* OpenSUSE
-* Manjaro
-* FreeBSD
-* Mint
+- **Qubes**
+- Elementary OS
+- Zorin
+- OpenSUSE
+- Manjaro
+- FreeBSD
+- Mint
 
 ### Code Style for Platform-Specific Roles
 

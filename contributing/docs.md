@@ -16,19 +16,19 @@ The most important piece of text in each of our Ansible projects is the [Ansible
 
 **The `meta/main.yml` description example:**
 
-* Installs Android Studio and sets up Android SDKs on nearly any OS
+- Installs Android Studio and sets up Android SDKs on nearly any OS
 
 **Gets spun and used by our automated documentation framework in the following formats:**
 
-* Installs Android Studio and sets up Android SDKs on nearly any OS
-* An Ansible role that installs Android Studio and sets up Android SDKs on nearly any OS
-* This repository is the home of an Ansible role that installs Ansible Studio and sets up Android SDKs on nearly any OS.
+- Installs Android Studio and sets up Android SDKs on nearly any OS
+- An Ansible role that installs Android Studio and sets up Android SDKs on nearly any OS
+- This repository is the home of an Ansible role that installs Ansible Studio and sets up Android SDKs on nearly any OS.
 
 It is important that all three variants of the `meta/main.yml` description make sense and be proper English. The `meta/main.yml` description should succinctly describe what the role does and possibly even describe what the product does if it is not well-known like Android Studio. An example of a description that includes an overview of the product would be something like "Installs HTTPie (a user-friendly, command-line HTTP client) on nearly any platform" for the [HTTPie role](https://gitlab.com/megabyte-labs/ansible-roles/httpie) or "Installs Packer (an automation tool for building machine images) on nearly any platform" for the [Packer role](https://gitlab.com/megabyte-labs/ansible-roles/packer).
 
 ### `logo.png`
 
-We include a `logo.png` file in all of our Ansible projects. This image is automatically integrated with GitLab so that a thumbnail appears next to the project. It is also shown in the README to give the user a better idea of what the role does. All roles should include the `logo.png` file. When adding a `logo.png` file please *strictly* adhere to the steps below:
+We include a `logo.png` file in all of our Ansible projects. This image is automatically integrated with GitLab so that a thumbnail appears next to the project. It is also shown in the README to give the user a better idea of what the role does. All roles should include the `logo.png` file. When adding a `logo.png` file please _strictly_ adhere to the steps below:
 
 1. Use Google image search to find a logo that best represents the product. Ensure the image is a `.png` file and that it has a transparent background, if possible. Ideally, the image should be the official logo for software that the Ansible role/project installs. The image should be at least 200x200 pixels.
 2. After downloading the image, ensure you have the sharp-cli installed by running `npm install -g sharp-cli`.

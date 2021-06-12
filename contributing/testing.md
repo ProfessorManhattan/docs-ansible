@@ -6,7 +6,7 @@ You can test all of the operating systems we support by running the following co
 molecule test
 ```
 
-The command `molecule test` will spin up VirtualBox VMs for all the OSes we support and run the role(s). *Do this before committing code.* If you are committing code for only one OS and can not create the fix or feature for the other operating systems then please [file an issue]({{ repository.playbooks }}/-/issues/new) so someone else can pick it up.
+The command `molecule test` will spin up VirtualBox VMs for all the OSes we support and run the role(s). _Do this before committing code._ If you are committing code for only one OS and can not create the fix or feature for the other operating systems then please [file an issue]({{ repository.playbooks }}/-/issues/new) so someone else can pick it up.
 
 ### Idempotence
 
@@ -29,9 +29,9 @@ For more information about Ansible Molecule, check out [the docs](https://molecu
 
 Some of our roles include applications like Android Studio. You can not fully test Android Studio from a Docker command line. In cases like this, you should use our desktop scenarios to provision a desktop GUI-enabled VM to test things like:
 
-* Making sure the Android Studio shortcut is in the applications menu
-* Opening Android Studio to make sure it is behaving as expected
-* Seeing if there is anything we can automate (e.g. if there is a "Terms of Usage" you have to click OK at then we should automate that process if possible)
+- Making sure the Android Studio shortcut is in the applications menu
+- Opening Android Studio to make sure it is behaving as expected
+- Seeing if there is anything we can automate (e.g. if there is a "Terms of Usage" you have to click OK at then we should automate that process if possible)
 
 You can specify which scenario you want to test by passing the `-s` flag with the name of the scenario you want to run. For instance, if you wanted to test on Ubuntu Desktop, you would run the following command:
 
@@ -44,6 +44,6 @@ This would run the Molecule test on Ubuntu Desktop.
 By default, the `molecule test` command will destroy the VM after the test is complete. To run the Ubuntu Desktop test and then open the desktop GUI you would have to:
 
 1. Run `molecule converge -s ubuntu-desktop`
-2. Open the VM through the VirtualBox UI (the username and password are both *vagrant*)
+2. Open the VM through the VirtualBox UI (the username and password are both _vagrant_)
 
 You can obtain a list of all possible scenarios by looking in the `molecule/` folder. The `molecule/default/` folder is run when you do not pass a scenario. All the other scenarios can be run by manually specifying the scenario (i.e. folder name).

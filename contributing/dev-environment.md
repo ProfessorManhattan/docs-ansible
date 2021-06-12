@@ -4,11 +4,11 @@ Before contributing to this project, you will have to make sure you have the too
 
 ### Requirements
 
-* **Ansible** >=2.10
-* **Python 3**, along with the `python3-netaddr` and `python3-pip` libraries (i.e. `sudo apt-get install python3 python3-netaddr python3-pip`)
-* **Docker**
-* **Node.js** >=12 which is used for the development environment which includes a pre-commit hook
-* **VirtualBox** which is used for running Molecule tests
+- **Ansible** >=2.10
+- **Python 3**, along with the `python3-netaddr` and `python3-pip` libraries (i.e. `sudo apt-get install python3 python3-netaddr python3-pip`)
+- **Docker**
+- **Node.js** >=12 which is used for the development environment which includes a pre-commit hook
+- **VirtualBox** which is used for running Molecule tests
 
 ### Getting Started
 

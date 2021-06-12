@@ -4,8 +4,8 @@ This repository is home a collection of Ansible playbooks meant to provision com
 
 This Ansible playbook is:
 
-* Highly configurable (most roles come with optional variables that you can configure to change the behavior of the role)
-* Compatible with all major operating systems (i.e. Windows, Mac OS X, Ubuntu, Fedora, CentOS, Debian, and even Archlinux)
-* The product of a team of experts
-* An amazing way to learn about developer tools that many would consider to be "the best of GitHub"
-* Open to new ideas - feel free to [open an issue]({{ repository.playbooks}}/-/issues/new) or [contribute]({{ repository.playbooks }}/-/blob/master/CONTRIBUTING.md) with a pull request!
+- Highly configurable (most roles come with optional variables that you can configure to change the behavior of the role)
+- Compatible with all major operating systems (i.e. Windows, Mac OS X, Ubuntu, Fedora, CentOS, Debian, and even Archlinux)
+- The product of a team of experts
+- An amazing way to learn about developer tools that many would consider to be "the best of GitHub"
+- Open to new ideas - feel free to [open an issue]({{ repository.playbooks}}/-/issues/new) or [contribute]({{ repository.playbooks }}/-/blob/master/CONTRIBUTING.md) with a pull request!
