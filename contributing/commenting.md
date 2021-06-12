@@ -53,7 +53,7 @@ The following is an example of the implementation of action comments. You can fi
 # Ensures Docker is started on boot.
 - name: Include tasks based on the operating system
   block:
-    - include_tasks: "install-{{ ansible_os_family }}.yml"
+    - include_tasks: 'install-{{ ansible_os_family }}.yml'
   when: not docker_snap_install
 
 # @action Ensures Docker is installed
@@ -70,7 +70,7 @@ The following is an example of the implementation of action comments. You can fi
 # Installs Docker Compose if the `docker_install_compose` variable is set to true.
 - name: Install Docker Compose (based on OS)
   block:
-    - include_tasks: "compose-{{ ansible_os_family }}.yml"
+    - include_tasks: 'compose-{{ ansible_os_family }}.yml'
   when: docker_install_compose | bool
 ```
 
