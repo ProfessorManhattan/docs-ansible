@@ -1,9 +1,11 @@
 # Ansible Role Documentation
 
-This is a submodule repository that contains documentation partials used to generate the README.md and possibly other markdown files. It works in conjunction with the `blueprint.json` and `blueprint.md` files in the root of the parent repository.
+This repository is meant to be included as a submodule in [our Ansible project repositories](https://gitlab.com/megabyte-labs/ansible-roles). It includes documentation partials that are used to generate the documentation for each of our Ansible projects.
 
-To generate the documentation, run the following command in the same directory as the blueprint files:
+To generate the documentation in one of our Ansible project repositories, you can run:
 
 ```
-npx @appnest/readme generate
+bash .start.sh
 ```
+
+Changes made to this repository will automatically propagate to our Dockerfile projects via GitLab CI.
