@@ -127,7 +127,7 @@ The above code will output something that looks like this:
 
 - improvement description
 
-Notice how the title for *improvement* is not capitalized. It should be capitalized so make sure you pay attention to that detail.
+Notice how the title for _improvement_ is not capitalized. It should be capitalized so make sure you pay attention to that detail.
 
 #### TODO Comment Guidelines
 
