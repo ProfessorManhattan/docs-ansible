@@ -58,7 +58,7 @@ The chart below provides a list of the scenarios we include in all of our Ansibl
 
 You might have noticed that there are no CI tests in the chart above for macOS and Windows. Due to the limitations of Docker, we use other methods to test macOS and Windows automatically with CI. After a project has passed various linting tests on GitLab CI, the following methods are used to test the project/role:
 
-* Linux platforms are tested using Molecule and Docker on GitLab CI in parallel. ([Link to GitLab CI configuration](https://gitlab.com/megabyte-labs/ci/gitlab-ci-templates/-/blob/master/molecule.gitlab-ci.yml))
-* Windows is tested using GitLab CI without Molecule. ([Link to GitLab CI configuration](https://gitlab.com/megabyte-labs/ci/gitlab-ci-templates/-/blob/master/windows-ansible-test.gitlab-ci.yml))
-* macOS is tested using GitHub Actions after the code is automatically synchronized between GitLab and GitHub. ([Link to sample GitHub Action configuration](https://gitlab.com/megabyte-labs/ansible-roles/androidstudio/-/blob/master/.github/workflows/macOS.yml))
-* If all the GitLab tests succeed (i.e. Linux/Windows), then a final E2E test that includes all the platforms is run using the `default` scenario with VirtualBox. In this stage, the compatibility matrix is generated. This test is also run on a cron to ensure our compatibility matrixes are up-to-date.
+- Linux platforms are tested using Molecule and Docker on GitLab CI in parallel. ([Link to GitLab CI configuration](https://gitlab.com/megabyte-labs/ci/gitlab-ci-templates/-/blob/master/molecule.gitlab-ci.yml))
+- Windows is tested using GitLab CI without Molecule. ([Link to GitLab CI configuration](https://gitlab.com/megabyte-labs/ci/gitlab-ci-templates/-/blob/master/windows-ansible-test.gitlab-ci.yml))
+- macOS is tested using GitHub Actions after the code is automatically synchronized between GitLab and GitHub. ([Link to sample GitHub Action configuration](https://gitlab.com/megabyte-labs/ansible-roles/androidstudio/-/blob/master/.github/workflows/macOS.yml))
+- If all the GitLab tests succeed (i.e. Linux/Windows), then a final E2E test that includes all the platforms is run using the `default` scenario with VirtualBox. In this stage, the compatibility matrix is generated. This test is also run on a cron to ensure our compatibility matrixes are up-to-date.
