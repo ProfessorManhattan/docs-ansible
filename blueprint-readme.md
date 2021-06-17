@@ -4,7 +4,6 @@
 {{ template:toc }}
 {{ load:.modules/docs/readme/overview.md }}
 {{ load:ansible_actions.md }}
-{{ load:.modules/docs/readme/variables.md }}
 {{ load:ansible_variables.md }}
 {{ load:.modules/docs/readme/supported-os.md }}
 {{ load:.modules/docs/readme/dependencies.md }}
