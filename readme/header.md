@@ -7,5 +7,5 @@
 </div>
 <div align="center">
   <center><h1 align="center">Ansible Role: {{ role_pretty_name }}</h1></center>
-  <center><h4 style="color: #18c3d1;">An open-source Ansible role / Brought to you by <a href="https://megabyte.space">Megabyte Labs</a></h4></center>
+  <center><h4 style="color: #18c3d1;">An open-source Ansible role / Brought to you by <a href="https://megabyte.space" target="_blank">Megabyte Labs</a></h4></center>
 </div>
