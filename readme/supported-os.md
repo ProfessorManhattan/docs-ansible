@@ -4,6 +4,6 @@ The chart below shows the operating systems that we have tested this role on. It
 
 {{ compatibility }}
 
-*The compatibility chart above was last generated on {{ compatibility_date }}.*
+_The compatibility chart above was last generated on {{ compatibility_date }}._
 
-***What does idempotent mean?*** Idempotent means that if you run this role twice in row then there will be no changes to the system the second time around.
+**_What does idempotent mean?_** Idempotent means that if you run this role twice in row then there will be no changes to the system the second time around.
