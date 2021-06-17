@@ -6,7 +6,7 @@ You can test all of the operating systems we support by running the following co
 molecule test
 ```
 
-The command `molecule test` will spin up VirtualBox VMs for all the OSes we support and run the role(s). _Do this before committing code._ If you are committing code for only one OS and can not create the fix or feature for the other operating systems then please [file an issue]({{ repository.playbooks }}/-/issues/new) so someone else can pick it up.
+The command `molecule test` will spin up VirtualBox VMs for all the OSes we support and run the role(s). _Do this before committing code._ If you are committing code for only one OS and can not create the fix or feature for the other operating systems then please, at the very minimum, [file an issue]({{ repository.playbooks }}/-/issues/new) so someone else can pick it up.
 
 ### Idempotence
 
@@ -46,4 +46,19 @@ By default, the `molecule test` command will destroy the VM after the test is co
 1. Run `molecule converge -s ubuntu-desktop`
 2. Open the VM through the VirtualBox UI (the username and password are both _vagrant_)
 
-You can obtain a list of all possible scenarios by looking in the `molecule/` folder. The `molecule/default/` folder is run when you do not pass a scenario. All the other scenarios can be run by manually specifying the scenario (i.e. folder name).
+You can obtain a list of all possible scenarios by looking in the `molecule/` folder. The `molecule/default/` folder is run when you do not pass a scenario. All the other scenarios can be run by manually specifying the scenario (e.g. `molecule test -s ubuntu-desktop` will run the test using the scenario in `molecule/ubuntu-desktop/`).
+
+### Molecule Scenario Descriptions
+
+The chart below provides a list of the scenarios we include in all of our Ansible projects along with a brief description of what they are included for.
+
+{{ molecule_descriptions }}
+
+### Continuous Integration (CI)
+
+You might have noticed that there are no CI tests in the chart above for macOS and Windows. Due to the limitations of Docker, we use other methods to test macOS and Windows automatically with CI. After a project has passed various linting tests on GitLab CI, the following methods are used to test the project/role:
+
+* Linux platforms are tested using Molecule and Docker on GitLab CI in parallel. ([Link to GitLab CI configuration](https://gitlab.com/megabyte-labs/ci/gitlab-ci-templates/-/blob/master/molecule.gitlab-ci.yml))
+* Windows is tested using GitLab CI without Molecule. ([Link to GitLab CI configuration](https://gitlab.com/megabyte-labs/ci/gitlab-ci-templates/-/blob/master/windows-ansible-test.gitlab-ci.yml))
+* macOS is tested using GitHub Actions after the code is automatically synchronized between GitLab and GitHub. ([Link to sample GitHub Action configuration](https://gitlab.com/megabyte-labs/ansible-roles/androidstudio/-/blob/master/.github/workflows/macOS.yml))
+* If all the GitLab tests succeed (i.e. Linux/Windows), then a final E2E test that includes all the platforms is run using the `default` scenario with VirtualBox. In this stage, the compatibility matrix is generated. This test is also run on a cron to ensure our compatibility matrixes are up-to-date.
