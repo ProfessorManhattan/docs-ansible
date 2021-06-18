@@ -7,24 +7,30 @@ Before contributing to this project, you will have to make sure you have the too
 - **Ansible** >=2.10
 - **Python 3**, along with the `python3-netaddr` and `python3-pip` libraries (i.e. `sudo apt-get install python3 python3-netaddr python3-pip`)
 - **Docker**
+- **Go**
 - **Node.js** >=12 which is used for the development environment which includes a pre-commit hook
 - **VirtualBox** which is used for running Molecule tests
 
+Most of these dependencies will automatically install (rootlessly) if they are missing from your system when you initialize the project by running `bash .start.sh`. Docker and VirtualBox must be installed with root priviledges. If they are missing from your system, running `bash .start.sh` will prompt you for your password and automatically install them. Otherwise, you can follow [directions for installing Docker](https://docs.docker.com/get-docker/) and/or [directions for installing VirtualBox](https://www.virtualbox.org/manual/ch02.html).
+
 ### Getting Started
 
-With all the requirements installed, navigate to the root directory and run the following commands to set up the development environment which includes installing the Python dependencies and installing the Ansible Galaxy dependencies:
+With all the requirements installed, navigate to the root directory and run the following command to set up the development environment which includes installing the Python dependencies and installing the Ansible Galaxy dependencies:
 
 ```terminal
-npm i
+bash .start.sh
 ```
 
-This will install all the dependencies and automatically register a pre-commit hook. More specifically, `npm i` will:
+This will install all the dependencies and automatically register a pre-commit hook. More specifically, `bash .start.sh` will:
 
-1. Install the Node.js development environment dependencies
-2. Install a pre-commit hook using [husky](https://www.npmjs.com/package/husky)
-3. Ensure that meta files and documentation are up-to-date
-4. Install the Python 3 requirements
-5. Install the Ansible Galaxy requirements
+1. Install missing development tools like Node.js and Python
+2. Install the Node.js development environment dependencies
+3. Install a pre-commit hook using [husky]({{ misc.husky }})
+4. Ensure that meta files and documentation are up-to-date
+5. Install the Python 3 requirements
+6. Install the Ansible Galaxy requirements
+7. Install a Go task runner which provides an easy-to-use interface for performing common tasks
+8. Re-generate documentation using the latest sources
 
 ### NPM Tasks Available
 

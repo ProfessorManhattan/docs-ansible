@@ -1,6 +1,6 @@
 ## Philosophy
 
-When you are working with one of our Ansible projects, try asking yourself, "**How can this be improved?**" For example, in the case of the [Android Studio role](https://github.com/ProfessorManhattan/ansible-androidstudio), the role installs Android Studio but there may be additional tasks that should be automated. Consider the following examples:
+When you are working with one of our Ansible projects, try asking yourself, "**How can this be improved?**" For example, in the case of the [Android Studio role]({{ profile_link.github }}/{{ profile.github }}/{{ github_prefix }}androidstudio), the role installs Android Studio but there may be additional tasks that should be automated. Consider the following examples:
 
 - _The software is installed but is asking for a license key._ - In this case, we should provide an option for automatically installing the license key using a CLI command.
 - _The software supports plugins_ - We should provide an option for specifying the plugins that are automatically installed.

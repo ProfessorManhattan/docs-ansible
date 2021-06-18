@@ -1,6 +1,6 @@
 ## Code Style
 
-To elaborate again, we try to follow the same code style across all our Ansible repositories. If something is done one way somewhere, then it should be done the same way elsewhere. It is up to you to [browse through our roles]({{ repository.playbooks }}/-/tree/master/roles) to get a feel for how everything should be styled. You should clone [the main Playbooks repository]({{ repository.playbooks }}), initialize all the submodules either via `npm i` or `git submodule update --init --recursive`, and search through the code base to see how we are _styling_ different task types. Below are some examples:
+To elaborate again, we try to follow the same code style across all our Ansible repositories. If something is done one way somewhere, then it should be done the same way elsewhere. It is up to you to [browse through our roles]({{ project.playbooks }}/-/tree/master/roles) to get a feel for how everything should be styled. You should clone [the main playbooks repository]({{ project.playbooks }}) (a.k.a. [Install Doctor]({{ link.installdoctor }})), initialize all the submodules either via `bash .start.sh` or `git submodule update --init --recursive`, and search through the code base to see how we are _styling_ different task types. Below are some examples:
 
 ### Arrays
 
@@ -55,7 +55,17 @@ In most cases, a role will require that software package dependencies are met be
 
 For example, say the application being installed is Android Studio. The dependency array should be assigned to a variable titled `androidstudio_dependencies` and placed in `vars/main.yml`.
 
-**BAD**
+**GOOD example of defining the variable in the `vars/main.yml` file**
+
+```yaml
+---
+androidstudio_dependencies:
+  - ffmpeg
+  - coolpackage
+  - anotherpackage
+```
+
+**BAD example of integrating the variable into a task file:**
 
 ```yaml
 - name: "Ensure {{ {{ app_name }} }}'s dependencies are installed"
@@ -64,7 +74,7 @@ For example, say the application being installed is Android Studio. The dependen
     state: present
 ```
 
-**GOOD**
+**GOOD example of integrating the variable into a task file:**
 
 ```yaml
 - name: "Ensure {{ {{ app_name }} }}'s dependencies are installed"

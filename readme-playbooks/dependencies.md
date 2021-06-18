@@ -3,7 +3,7 @@
 - **[Python 3](https://www.python.org/)**
 - **[Ansible >2.9](https://www.ansible.com/)**
 
-There are also several other Python and Ansible requirements that can be installed by running the following command in the root of this repository:
+There are Python and Ansible package requirements that can be installed by running the following command in the root of this repository:
 
 ```
 pip3 install -r requirements.txt

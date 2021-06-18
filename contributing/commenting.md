@@ -1,6 +1,6 @@
 ## Commenting
 
-We strive to make our roles easy to understand. Commenting is a major part of making our roles easier to grasp. Several types of comments are supported in such a way that they tie into our automated documentation generation system. This project uses [ansible-autodoc](https://github.com/AndresBott/ansible-autodoc) to scan through specially marked up comments and generate documentation out of them. The module also allows the use of markdown in comments so feel free to bold, italicize, and `code_block` as necessary. Although it is perfectly acceptable to use regular comments, in most cases, you should use one of the following types of _special_ comments:
+We strive to make our roles easy to understand. Commenting is a major part of making our roles easier to grasp. Several types of comments are supported in such a way that they tie into our automated documentation generation system. This project uses [ansible-autodoc]({{ project.autodoc }}) to scan through specially marked up comments and generate documentation out of them. The module also allows the use of markdown in comments so feel free to bold, italicize, and `code_block` as necessary. Although it is perfectly acceptable to use regular comments, in most cases, you should use one of the following types of _special_ comments:
 
 - [Variable comments](#variable-comments)
 - [Action comments](#action-comments)
@@ -14,11 +14,11 @@ Each variable in `defaults/main.yml` should be added and documented using the fo
 
 <!-- prettier-ignore-start -->
 ```yaml
-  # @var variable_name: default_value
-  # The description of the variable which should be no longer than 160 characters per line.
-  # You can separate the description into new lines so you do not pass the 160 character
-  # limit
-  variable_name: default_value
+ # @var variable_name: default_value
+ # The description of the variable which should be no longer than 160 characters per line.
+ # You can separate the description into new lines so you do not pass the 160 character
+ # limit
+ variable_name: default_value
 ```
 <!-- prettier-ignore-end -->
 
@@ -26,21 +26,21 @@ There are cases where you may want include an example or you can not fit the def
 
 <!-- prettier-ignore-start -->
 ```yaml
-  # @var variable_name: []
-  # The description of the variable which should be no longer than 160 characters per line.
-  # You can separate the description into new lines so you do not pass the 160 character
-  # limit
-  variable_name: []
-  # @example #
-  # variable_name:
-  #   - name: jimmy
-  #     param: henry
-  #   - name: albert
-  # @end
+ # @var variable_name: []
+ # The description of the variable which should be no longer than 160 characters per line.
+ # You can separate the description into new lines so you do not pass the 160 character
+ # limit
+ variable_name: []
+ # @example #
+ # variable_name:
+ #   - name: jimmy
+ #     param: henry
+ #   - name: albert
+ # @end
 ```
 <!-- prettier-ignore-end -->
 
-Each variable/comment block in `defaults/main.yml` should be separated by a line return. You can see an example of a `defaults/main.yml` file using this special [variable syntax in the Docker role](https://gitlab.com/ProfessorManhattan/Playbooks/-/blob/master/roles/virtualization/docker/defaults/main.yml).
+Each variable/comment block in `defaults/main.yml` should be separated by a line return. You can see an example of a `defaults/main.yml` file using this special [variable syntax in the Docker role]({{ repository.group.ansible_roles }}/docker/defaults/main.yml).
 
 ### Action Comments
 
@@ -48,35 +48,35 @@ Action comments allow us to describe what the role does. Each action comment sho
 
 #### Example Action Comment Implementation
 
-The following is an example of the implementation of action comments. You can find the [source here](https://gitlab.com/ProfessorManhattan/Playbooks/-/blob/master/roles/virtualization/docker/tasks/main.yml) as well as an example of why and how you would include an [action comment outside of the `tasks/main.yml` file here](https://gitlab.com/ProfessorManhattan/Playbooks/-/blob/master/roles/virtualization/docker/tasks/compose-Darwin.yml).
+The following is an example of the implementation of action comments. You can find the [source here]({{ repository.group.ansible_roles }}/docker/tasks/main.yml) as well as an example of why and how you would include an [action comment outside of the `tasks/main.yml` file here]({{ repository.group.ansible_roles }}/docker/tasks/compose-Darwin.yml).
 
 <!-- prettier-ignore-start -->
 ```yaml
-  # @action Ensures Docker is installed
-  # Installs Docker on the target machine.
-  # @action Ensures Docker is installed
-  # Ensures Docker is started on boot.
-  - name: Include tasks based on the operating system
-    block:
-      - include_tasks: 'install-{{ ansible_os_family }}.yml'
-    when: not docker_snap_install
+ # @action Ensures Docker is installed
+ # Installs Docker on the target machine.
+ # @action Ensures Docker is installed
+ # Ensures Docker is started on boot.
+ - name: Include tasks based on the operating system
+   block:
+     - include_tasks: 'install-{{ {{ ansible_os_family }} }}.yml'
+   when: not docker_snap_install
 
-  # @action Ensures Docker is installed
-  # If the target Docker host is a Linux machine and the `docker_snap_install` variable
-  # is set to true, then Docker will be installed as a snap package.
-  - name: Install Docker via snap
-    community.general.snap:
-      name: docker
-    when:
-      - ansible_os_family not in ('Windows', 'Darwin')
-      - docker_snap_install
+ # @action Ensures Docker is installed
+ # If the target Docker host is a Linux machine and the `docker_snap_install` variable
+ # is set to true, then Docker will be installed as a snap package.
+ - name: Install Docker via snap
+   community.general.snap:
+     name: docker
+   when:
+     - ansible_os_family not in ('Windows', 'Darwin')
+     - docker_snap_install
 
-  # @action Installs Docker Compose
-  # Installs Docker Compose if the `docker_install_compose` variable is set to true.
-  - name: Install Docker Compose (based on OS)
-    block:
-      - include_tasks: 'compose-{{ ansible_os_family }}.yml'
-    when: docker_install_compose | bool
+ # @action Installs Docker Compose
+ # Installs Docker Compose if the `docker_install_compose` variable is set to true.
+ - name: Install Docker Compose (based on OS)
+   block:
+     - include_tasks: 'compose-{{ {{ ansible_os_family }} }}.yml'
+   when: docker_install_compose | bool
 ```
 <!-- prettier-ignore-end -->
 
