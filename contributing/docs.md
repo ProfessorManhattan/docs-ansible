@@ -2,7 +2,7 @@
 
 Since we have hundreds of Ansible roles to maintain, the majority of the files inside each role are shared across all our Ansible projects. We synchronize these common files across all our repositories with various build tools. When you clone a new repository, the first command you should run is `bash .start.sh`. This will run the full build sequence and ensure everything is up-to-date. To synchronize the project at a later point in time, you should leverage the `task -l` command which will show you a list of available tasks.
 
-### The `"blueprint" package.json` Field  and `@appnest/readme`
+### The `"blueprint" package.json` Field and `@appnest/readme`
 
 In the root of all of our Ansible repositories, we include a file named `package.json`. In the key named `"blueprint"`, there are variables that are used in our build tools. Most of the variables stored in `"blueprint"` are used for generating documentation. All of our documentation is generated using variables and document partials that we feed into a project called `[@appnest/readme]({{ misc.appnest }})` (which is in charge of generating the final README/CONTRIBUTING guides). When `@appnest/readme` is run, it includes the variables stored in `"blueprint"` in the context that it uses to inject variables in the documentation. You can view the documentation partials by checking out the `./.common` folder which is a submodule that is shared across all of our Ansible projects.
 
@@ -16,13 +16,13 @@ The most important piece of text in each of our Ansible projects is the [Ansible
 
 **The `meta/main.yml` description example:**
 
-- *Installs Android Studio and sets up Android SDKs on nearly any OS*
+- _Installs Android Studio and sets up Android SDKs on nearly any OS_
 
 **Gets spun and used by our automated documentation framework in the following formats:**
 
-- *Installs Android Studio and sets up Android SDKs on nearly any OS*
-- An Ansible role that *installs Android Studio and sets up Android SDKs on nearly any OS*
-- This repository is the home of an Ansible role that *installs Ansible Studio and sets up Android SDKs on nearly any OS*.
+- _Installs Android Studio and sets up Android SDKs on nearly any OS_
+- An Ansible role that _installs Android Studio and sets up Android SDKs on nearly any OS_
+- This repository is the home of an Ansible role that _installs Ansible Studio and sets up Android SDKs on nearly any OS_.
 
 It is important that all three variants of the `meta/main.yml` description make sense and be proper English. The `meta/main.yml` description should succinctly describe what the role does and possibly even describe what the product does if it is not well-known like Android Studio. An example of a description that includes an overview of the product would be something like, "Installs HTTPie (a user-friendly, command-line HTTP client) on nearly any platform," for the [HTTPie role]({{ profile_link.github }}/{{ profile.github }}/{{ github_prefix }}httpie) or "Installs Packer (an automation tool for building machine images) on nearly any platform" for the [Packer role]({{ profile_link.github }}/{{ profile.github }}/{{ github_prefix }}packer).
 
