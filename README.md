@@ -72,4 +72,3 @@ To summarize, the order of the flow is:
 In both the shared documentation repository and the project-specific documentation repositories there is a file called `common.json` in the root of the projects. These files contain variables that are used to dynamically inject variables into the documentation. The `common.json` files in both repositories are merged when there are updates to create the `variables.json` file that is in each project-specific documentation repository. During this process, the variables in the project-specific `common.json` file takes precedence over the variables in the shared `common.json` file.
 
 Then, when an individual project is generating its documentation, the variables in the `"blueprint"` key of the `package.json` file in each individual repository take precedence over the variables in the `variables.json` file which is stored in `./.common/docs/variables.json` in every one of our projects.
-
