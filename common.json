@@ -40,5 +40,6 @@
     ["`ci-docker-fedora`", "Uses Docker to test multiple versions of Fedora."],
     ["`ci-docker-ubuntu`", "Uses Docker to test multiple versions of Ubuntu."]
   ],
+  "prettier_config": "@megabytelabs/prettier-config-ansible",
   "title_prefix": "Ansible Role: "
 }
