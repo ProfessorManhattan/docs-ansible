@@ -133,7 +133,8 @@ Notice how the title for _improvement_ is not capitalized. It should be capitali
 
 - A TODO comment can be placed anywhere as long as no lines pass the limit of 160 characters.
 - Try using similar TODO comment groups. Nothing is set in stone yet but try to use the following categories unless you really believe we need a new category:
-  - bug
-  - feature
-  - improvement
-  - test
+  - Bug
+  - Feature
+  - Improvement
+  - Test
+- Ensure you capitalize the category
