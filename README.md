@@ -65,7 +65,6 @@ To summarize, the order of the flow is:
 3. Project-specific common files repository
 4. Individual project repository.
 
-
 [![-----------------------------------------------------](https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png)](#-common-json)
 
 ## ➤ `common.json`
