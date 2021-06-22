@@ -12,7 +12,6 @@
 
 [![-----------------------------------------------------](https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png)](#-table-of-contents)
 
-
 ## ➤ Table of Contents
 
 - [➤ Summary](#-summary)
