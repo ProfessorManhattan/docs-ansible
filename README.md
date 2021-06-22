@@ -10,6 +10,7 @@
   <center><h4 style="color: #18c3d1;">Documentation partials for generating sweet READMEs for hundreds of repositories</h4></center>
 </div>
 
+
 [![-----------------------------------------------------](https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png)](#-table-of-contents)
 
 ## ➤ Table of Contents
