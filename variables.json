@@ -33,13 +33,6 @@
   },
   "github_prefix": "<i></i>",
   "group": "ansible",
-  "hbs": {
-    "ansible": false,
-    "dockerfile": false,
-    "playbook": false,
-    "python": false,
-    "yaml": false
-  },
   "json_top_keys": "",
   "license": "MIT",
   "link": {
