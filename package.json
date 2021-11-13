@@ -1,26 +1,24 @@
 {
   "private": false,
-  "name": "@megabytelabs/docs-shared",
+  "name": "@installdoc/docs-ansible",
   "version": "0.0.1",
-  "description": "Documentation partials shared between project-type specific documentation partial repositories",
+  "description": "Documentation partials used to generate documentation for Ansible roles, playbooks, and more",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
   "homepage": "https://megabyte.space",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ProfessorManhattan/docs-shared.git"
+    "url": "git+https://github.com/ProfessorManhattan/docs-ansible.git"
   },
   "bugs": {
     "email": "help@megabyte.space",
-    "url": "https://gitlab.com/megabyte-labs/documentation/shared/-/issues"
+    "url": "https://gitlab.com/megabyte-labs/documentation/ansible/-/issues"
   },
   "type": "module",
   "scripts": {
     "help": "task --list",
     "prepare": "task common:husky",
-    "start": "bash .config/start.sh",
-    "test": "cd .common-shared && git pull origin master && cd .. && cp -rT .common-shared/common/ . && task start",
-    "test:clone": "git clone https://gitlab.com/megabyte-labs/common/shared.git .common-shared"
+    "start": "bash .config/start.sh"
   },
   "config": {
     "commitizen": {
@@ -44,8 +42,10 @@
     "docs",
     "documentation",
     "megabytelabs",
-    "playbook",
+    "npm",
+    "package",
     "partials",
+    "playbook",
     "playbooks",
     "professormanhattan",
     "roles",
