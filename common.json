@@ -11,6 +11,9 @@
     ]
   ],
   "description_emojis": "👨🏻‍💻 🩺",
+  "docs": {
+    "link": "https://megabyte.space/docs/common/ansible"
+  },
   "group": "ansible",
   "link": {
     "docker_role": "https://github.com/ProfessorManhattan/ansible-docker",
