@@ -1,24 +1,27 @@
 {
-  "private": false,
-  "name": "@installdoc/docs-ansible",
-  "version": "0.0.1",
-  "description": "Documentation partials used to generate documentation for Ansible roles, playbooks, and more",
-  "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
-  "homepage": "https://megabyte.space",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ProfessorManhattan/docs-ansible.git"
+  "blueprint": {
+    "description": "Documentation partials used to generate documentation for Ansible roles, playbooks, and more",
+    "docs": {
+      "link": "https://megabyte.space/docs/documentation/ansible"
+    },
+    "group": "documentation",
+    "name": "Ansible Documentation",
+    "overview": "This repository contains documentation partials used to generate documentation for Ansible roles/playbooks. It uses the partials in conjunction with variables to generate unique (and useful) documentation for its downstream children. When this project is updated, the changes are propagated to the [Ansible common files repository](https://gitlab.com/megabyte-labs/common/ansible). After that, the Ansible common files repository propagates its changes (which includes updates to the documentation hosted in this repository) to individual Ansible projects.",
+    "profile": {
+      "npmjs_organization": "mblabs"
+    },
+    "repository": {
+      "github": "https://github.com/ProfessorManhattan/docs-ansible",
+      "gitlab": "https://gitlab.com/megabyte-labs/documentation/ansible"
+    },
+    "slug": "docs-ansible",
+    "subgroup": "ansible",
+    "title": "Ansible Role/Playbook Documentation Partials"
   },
   "bugs": {
     "email": "help@megabyte.space",
     "url": "https://gitlab.com/megabyte-labs/documentation/ansible/-/issues"
-  },
-  "type": "module",
-  "scripts": {
-    "help": "task --list",
-    "prepare": "task common:husky",
-    "start": "bash .config/start.sh"
   },
   "config": {
     "commitizen": {
@@ -28,14 +31,32 @@
   "dependencies": {
     "tslib": "^2.3.1"
   },
+  "description": "Documentation partials used to generate documentation for Ansible roles, playbooks, and more",
   "devDependencies": {
     "@commitlint/config-conventional": "^13.1.0",
-    "@megabytelabs/eslint-config": "^1.0.0",
-    "@megabytelabs/prettier-config": "^14.14.14",
+    "@mblabs/eslint-config": "^1.0.92",
+    "@mblabs/prettier-config": "^14.14.14",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "handlebars-helpers": "^0.10.0"
   },
+  "engines": {
+    "node": ">=14"
+  },
+  "eslintConfig": {
+    "extends": "@mblabs/eslint-config"
+  },
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/megabytelabs"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/ProfessorManhattan"
+    }
+  ],
+  "homepage": "https://megabyte.space",
   "keywords": [
     "ansible",
     "common",
@@ -51,45 +72,7 @@
     "roles",
     "shared"
   ],
-  "engines": {
-    "node": ">=14"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "blueprint": {
-    "description": "Documentation partials used to generate documentation for Ansible roles, playbooks, and more",
-    "docs": {
-      "link": "https://megabyte.space/docs/documentation/ansible"
-    },
-    "group": "documentation",
-    "name": "Ansible Documentation",
-    "overview": "This repository contains documentation partials used to generate documentation for Ansible roles/playbooks. It uses the partials in conjunction with variables to generate unique (and useful) documentation for its downstream children. When this project is updated, the changes are propagated to the [Ansible common files repository](https://gitlab.com/megabyte-labs/common/ansible). After that, the Ansible common files repository propagates its changes (which includes updates to the documentation hosted in this repository) to individual Ansible projects.",
-    "repository": {
-      "github": "https://github.com/ProfessorManhattan/docs-ansible",
-      "gitlab": "https://gitlab.com/megabyte-labs/documentation/ansible"
-    },
-    "slug": "docs-ansible",
-    "subgroup": "ansible",
-    "title": "Ansible Role/Playbook Documentation Partials"
-  },
-  "eslintConfig": {
-    "extends": "@megabytelabs/eslint-config",
-    "rules": {
-      "import/no-extraneous-dependencies": "off",
-      "import/no-unresolved": "off"
-    }
-  },
-  "funding": [
-    {
-      "type": "opencollective",
-      "url": "https://opencollective.com/megabytelabs"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/ProfessorManhattan"
-    }
-  ],
+  "license": "MIT",
   "lint-staged": {
     "**/*": [
       "blocklint --wordlist blacklist,slave,whitelist",
@@ -131,10 +114,26 @@
       "task image:compress --"
     ]
   },
-  "prettier": "@megabytelabs/prettier-config",
+  "name": "@installdoc/docs-ansible",
+  "prettier": "@mblabs/prettier-config",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProfessorManhattan/docs-ansible.git"
+  },
+  "scripts": {
+    "help": "task --list",
+    "prepare": "task common:husky",
+    "start": "bash .config/start.sh"
+  },
   "standard-version": {
     "scripts": {
       "prerelease": "git add --all"
     }
-  }
+  },
+  "type": "module",
+  "version": "0.0.1"
 }
