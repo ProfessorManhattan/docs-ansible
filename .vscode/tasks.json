@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "recommendations": [],
   "tasks": [
     {
       "label": "(ansible:playbook:environment:cli): Prompts for which environment to use and then symlinks to it",
@@ -165,6 +165,11 @@
       "label": "(fix:yaml): Autofix YML files",
       "type": "shell",
       "command": "bash .config/scripts/vscode.sh && task fix:yaml"
+    },
+    {
+      "label": "(git:gitlab:group:exec): Execute a shell script across all repositories in a group and commit the changes",
+      "type": "shell",
+      "command": "bash .config/scripts/vscode.sh && task git:gitlab:group:exec"
     },
     {
       "label": "(git:remotes): Configure the git remote `origin` to point to GitLab and the git remote `all` to point to GitLab and GitHub",
