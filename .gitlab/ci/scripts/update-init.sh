@@ -13,9 +13,15 @@ if [ -n "$GITLAB_CI" ]; then
   git config user.name "$GITLAB_CI_NAME"
   git checkout "$CI_COMMIT_REF_NAME"
   git pull origin "$CI_COMMIT_REF_NAME"
+else
+  git reset --hard HEAD
+  git clean -fxd
+  git checkout master
+  git pull origin master
 fi
 
 # @description Clone shared files repository
+rm -rf common-shared
 git clone https://gitlab.com/megabyte-labs/common/shared.git common-shared
 
 # @description Refresh taskfiles and GitLab CI files
@@ -37,7 +43,7 @@ if ! task donothing &> /dev/null; then
   mv "$TMP" Taskfile.yml
   rm Taskfile-shared.yml
   npm install
-  eslint --fix Taskfile.yml
+  task fix:eslint -- Taskfile.yml
 fi
 
 # @description Clean up
