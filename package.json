@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "@mblabs/docs-ansible",
+  "name": "@installdoc/docs-ansible",
   "version": "0.0.1",
   "description": "Documentation partials used to generate documentation for Ansible roles, playbooks, and more",
   "license": "MIT",
@@ -84,7 +84,7 @@
     "name": "Ansible Documentation",
     "overview": "This repository contains documentation partials used to generate documentation for Ansible roles/playbooks. It uses the partials in conjunction with variables to generate unique (and useful) documentation for its downstream children. When this project is updated, the changes are propagated to the [Ansible common files repository](https://gitlab.com/megabyte-labs/common/ansible). After that, the Ansible common files repository propagates its changes (which includes updates to the documentation hosted in this repository) to individual Ansible projects.",
     "profile": {
-      "npmjs_organization": "mblabs"
+      "npmjs_organization": "installdoc"
     },
     "repository": {
       "github": "https://github.com/ProfessorManhattan/docs-ansible",
@@ -92,7 +92,10 @@
     },
     "slug": "docs-ansible",
     "subgroup": "ansible",
-    "title": "Ansible Role/Playbook Documentation Partials"
+    "title": "Ansible Role/Playbook Documentation Partials",
+    "github_id": "R_kgDOGetcsw",
+    "gitlab_project_id": "24679446",
+    "gitlab_group_id": "11096751"
   },
   "commitlint": {
     "extends": [
@@ -101,7 +104,10 @@
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "eslintConfig": {
-    "extends": "eslint-config-strict-mode"
+    "extends": "eslint-config-strict-mode",
+    "rules": {
+      "import/no-extraneous-dependencies": "off"
+    }
   },
   "funding": [
     {

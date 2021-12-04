@@ -50,6 +50,7 @@ tasks:
   modules:local:sync:
     cmds:
       - |
+        chmod +x .config/log
         for PATTERN in {{.NPM_KEEP_UPDATED}}; do
           find ./node_modules/$PATTERN -maxdepth 0 | while read PATHH; do
             if [ -f "$PATHH/package.json" ]; then
@@ -66,7 +67,7 @@ tasks:
           LOCAL="$(jq -r '.version' ./node_modules/{{.CLI_ARGS}}/package.json)"
           COMPARE="$(.config/scripts/lib/semver-compare.sh "$LOCAL" "$LATEST")"
           if [ "$COMPARE" == '-1' ]; then
-            .config/log info "Version `""$LATEST""` is available for {{.CLI_ARGS}} (currently version $LOCAL)"
+            .config/log info "Version $LATEST is available for {{.CLI_ARGS}} (currently version $LOCAL)"
             {{.NPM_PROGRAM_LOCAL}} update {{.CLI_ARGS}}@latest
           fi
         ignore_error: true
