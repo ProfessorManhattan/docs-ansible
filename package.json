@@ -80,6 +80,9 @@
     "docs": {
       "link": "https://megabyte.space/docs/documentation/ansible"
     },
+    "github_id": "R_kgDOGetcsw",
+    "gitlab_group_id": "11096751",
+    "gitlab_project_id": "24679446",
     "group": "documentation",
     "name": "Ansible Documentation",
     "overview": "This repository contains documentation partials used to generate documentation for Ansible roles/playbooks. It uses the partials in conjunction with variables to generate unique (and useful) documentation for its downstream children. When this project is updated, the changes are propagated to the [Ansible common files repository](https://gitlab.com/megabyte-labs/common/ansible). After that, the Ansible common files repository propagates its changes (which includes updates to the documentation hosted in this repository) to individual Ansible projects.",
@@ -92,10 +95,7 @@
     },
     "slug": "docs-ansible",
     "subgroup": "ansible",
-    "title": "Ansible Role/Playbook Documentation Partials",
-    "github_id": "R_kgDOGetcsw",
-    "gitlab_project_id": "24679446",
-    "gitlab_group_id": "11096751"
+    "title": "Ansible Role/Playbook Documentation Partials"
   },
   "commitlint": {
     "extends": [
