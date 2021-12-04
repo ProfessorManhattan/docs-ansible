@@ -23,7 +23,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-emoji"
+      "path": "node_modules/cz-emoji-conventional"
     }
   },
   "dependencies": {
@@ -41,11 +41,16 @@
     "@mblabs/prettier-config": "^14.14.30",
     "@mblabs/release-config": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@washingtondc/development": "^1.0.2",
+    "@washingtondc/prettier": "^1.0.0",
+    "@washingtondc/release": "^0.0.2",
     "commitlint-config-gitmoji": "^2.2.5",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-strict-mode": "^1.0.0",
     "glob": "^7.2.0",
     "handlebars-helpers": "^0.10.0",
-    "semantic-release": "^18.0.0"
+    "semantic-release": "^18.0.0",
+    "sleekfast": "^0.0.1"
   },
   "keywords": [
     "ansible",
@@ -61,7 +66,8 @@
     "playbooks",
     "professormanhattan",
     "roles",
-    "shared"
+    "shared",
+    "washingtondc"
   ],
   "engines": {
     "node": ">=14.18.0"
@@ -88,8 +94,14 @@
     "subgroup": "ansible",
     "title": "Ansible Role/Playbook Documentation Partials"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "helpUrl": "https://megabyte.space/docs/contributing/commits"
+  },
   "eslintConfig": {
-    "extends": "@mblabs/eslint-config"
+    "extends": "eslint-config-strict-mode"
   },
   "funding": [
     {
@@ -123,7 +135,6 @@
       "task fix:json --"
     ],
     "**/*.sh": [
-      "task fix:shell --",
       "task lint:shell --"
     ],
     "**/*.toml": [
@@ -142,12 +153,12 @@
       "task image:compress --"
     ]
   },
-  "prettier": "@mblabs/prettier-config",
+  "prettier": "@washingtondc/prettier",
   "release": {
     "branches": [
       "master",
       "next"
     ],
-    "extends": "@mblabs/release-config"
+    "extends": "@washingtondc/release"
   }
 }
