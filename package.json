@@ -114,6 +114,9 @@
     "**/*": [
       "task lint:any --"
     ],
+    "**/*!(template).(json|webapp|webmanifest)": [
+      "task fix:json --"
+    ],
     "**/*.(bash|cfg|cgi|command|css|env|env.*|handlebars|hbs|html|less|fcgi|java|md|mdx|mjml|php|phtml|properties|reg|scss|tmpl|tmux|tool|tpl|zsh)": [
       "task fix:prettier --"
     ],
@@ -144,6 +147,10 @@
     ],
     "**/*.json": [
       "task fix:json --"
+    ],
+    "**/*.md": [
+      "task fix:markdown --",
+      "task lint:spelling:markdown --"
     ],
     "**/*.php": [
       "task fix:php --",
