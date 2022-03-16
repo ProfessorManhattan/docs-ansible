@@ -47,7 +47,7 @@ tasks:
     cmds:
       - task: setup
     status:
-      - '[ -n $CI ] && [ -f /.dockerenv ]'
+      - '[ -n $CI ] || [ -f /.dockerenv ]'
 
   docker:
     cmds:
@@ -117,7 +117,7 @@ tasks:
 
   setup:
     cmds:
-      - task: :install:software:brew
+      - task: install:software:brew
       - task: prereqs
       - task: register:env
         vars:
