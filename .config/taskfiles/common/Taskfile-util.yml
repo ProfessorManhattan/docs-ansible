@@ -25,14 +25,11 @@ tasks:
         TMP_COMBINED="$(mktemp)"
         TMP_JQ="$(mktemp)"
         TMP_YQ="$(mktemp)"
-        mkdir -p .cache/task-map
-        echo "here"
-        yq -o=j '{{.MAP_FILE_QUERY}}' Taskfile.yml > {{.MAP_FILE}}
-        echo "here2"
+        mkdir -p "$(dirname '{{.MAP_FILE}}')"
+        yq -o=j '{{.MAP_FILE_QUERY}}' Taskfile.yml > "{{.MAP_FILE}}"
         jq -c '.[]' "{{.MAP_FILE}}" | while read i; do
-          PREFIX="$(echo "$i" | jq -r '.key')"
-          FILE="$(echo "$i" | jq -r '.value')"
-          echo "$FILE"
+          PREFIX="$(jq -r '.key' < "$i")"
+          FILE="$(jq -r '.value' "$i")"
           if [ -f "$FILE" ]; then
             yq -o=j '.tasks' "$FILE" > "$TMP_YQ"
             jq --arg prefix "$PREFIX:" '[to_entries | .[] | .key as $key | .value | ._task? = $prefix + $key]' "$TMP_YQ" > "$TMP_JQ"
@@ -40,9 +37,10 @@ tasks:
             cp "$TMP_COMBINED" "$COMBINED"
           fi
         done
-        echo "Yo"
         mv "$COMBINED" '{{.MAP_FILE}}'
-        echo "done"
+    sources:
+      - .config/taskfiles/*.yml
+      - Taskfile.yml
 
   task:tag:command:
     deps:
