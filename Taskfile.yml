@@ -16,6 +16,7 @@ includes:
   common: ./.config/taskfiles/common/Taskfile.yml
   common:code: ./.config/taskfiles/common/Taskfile-code.yml
   common:update: ./.config/taskfiles/common/Taskfile-update.yml
+  common:start: ./.config/taskfiles/common/Taskfile-start.yml
   common:util: ./.config/taskfiles/common/Taskfile-util.yml
   docker: ./.config/taskfiles/docker/Taskfile.yml
   docker:build: ./.config/taskfiles/docker/Taskfile-build.yml
@@ -134,8 +135,10 @@ vars:
   # yamllint enable rule:line-length
   PYTHON_HANDLE: 'poetry run '
   PYTHON_VIRTUALENV: true
-  REPOSITORY_SUBTYPE: ansible
-  REPOSITORY_TYPE: documentation
+  REPOSITORY_SUBTYPE:
+    sh: if type jq &> /dev/null && [ -f package.json ]; then VER="$(jq -r .blueprint.subgroup package.json)"; if [ "$VER" == null ]; then echo "documentation"; else echo "$VER"; fi; else echo "documentation"; fi
+  REPOSITORY_TYPE:
+    sh: if type jq &> /dev/null && [ -f package.json ]; then VER="$(jq -r .blueprint.group package.json)"; if [ "$VER" == null ]; then echo "documentation"; else echo "$VER"; fi; else echo "documentation"; fi
   SEMANTIC_CONFIG: semantic-release-config
   TIMEZONE: America/New_York
 env:
@@ -714,21 +717,29 @@ tasks:
           [[ $- == *i* ]] && task prepare || (.config/log error '{{.NONINTERACTIVE_MISSING_TEST_CMD}}' && exit 1)
         fi
   update:
-    desc: Update the repository
+    desc: Fully update the repository
+    summary: |
+      # Update the Repository / Project
+
+      This task will:
+
+      1. Ensure Homebrew is installed
+      2. Ensure runtimes like Node.js, Go, Python, and Poetry are installed
+      3. Ensure the `PATH` environment variable is properly configured
+      4. Configure the environment if it is in a `$CI` environment
+      5. Run a repair script that is used to ensure older repositories are compatible with the Taskfile scripts
+      6. Prepare the repository by automatically setting up certain parts of the project
+      7. Run a full update on the repository with `task start`
+      8. Automatically commit changes
+      9. Update GitLab/GitHub repository settings if the `GITHUB_TOKEN` / `GITLAB_TOKEN` variables are set
+
+      Along the way, if any dependencies are missing they will be installed as well just like with all of the
+      tasks included in these Taskfiles.
     log:
       error: Failed to update the repository
       start: Updating the repository..
       success: Finished updating the repository
     cmds:
-      - |
-        if ! type brew > /dev/null; then
-          task install:software:brew
-          . "$HOME/.profile"
-        fi
-        if ! type jq > /dev/null || ! type yq > /dev/null || ! type node > /dev/null || ! type go > /dev/null || ! type poetry > /dev/null; then
-          task update:prereqs
-          . "$HOME/.profile"
-        fi
-        task update:init
-        task prepare
-        task update:finish
+      - task: common:start
+        env:
+          UPDATE_PROJECT: 'true'

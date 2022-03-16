@@ -36,6 +36,7 @@ tasks:
             cp "$TMP_COMBINED" "$COMBINED"
           fi
         done
+        mkdir -p .config/task-map
         mv "$COMBINED" '{{.MAP_FILE}}'
     sources:
       - .config/taskfiles/*.yml
