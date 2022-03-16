@@ -662,7 +662,7 @@
       "command": "bash start.sh && task test"
     },
     {
-      "label": "(update): Update the repository",
+      "label": "(update): Fully update the repository",
       "type": "shell",
       "command": "bash start.sh && task update"
     },
