@@ -14,7 +14,7 @@ task ansible:test:vagrant
 ### macOS/Linux
 
 ```shell
-QUICKSTART=true curl -sS https://gitlab.com/megabyte-labs/gas-station/-/raw/master/start.sh | bash
+curl -sSL https://gitlab.com/megabyte-labs/gas-station/-/raw/master/scripts/quickstart.sh | bash
 ```
 
 ### Windows
