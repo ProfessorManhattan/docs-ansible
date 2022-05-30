@@ -29,7 +29,7 @@
   },
   "group": "ansible",
   "hostapp_var_chart": [
-    ["App", "Description", "GitHub"],
+    ["App", "Description", "<div style=\"width:124px\">GitHub</div>"],
     [
       "**[Authelia](https://www.authelia.com/)**",
       "An authentication portal that supports SSO and 2FA (_[Homepage](https://www.authelia.com/) | [Documentation](https://www.authelia.com/docs/)_)",
@@ -52,7 +52,7 @@
     ]
   ],
   "htpc_var_chart": [
-    ["App", "Description", "GitHub"],
+    ["App", "Description", "<div style=\"width:124px\">GitHub</div>"],
     [
       "**[WireGuard](https://docs.linuxserver.io/images/docker-wireguard)**",
       "Dedicated WireGuard VPN for the HTPC applications which is configured in *our docker-compose.yml* file to be used as the internet connection for all the containers (_[Homepage](https://www.wireguard.com/)_)",
